@@ -37,3 +37,5 @@ async def delete_comment(comment_id: int) -> str:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Comment not found")
     comments_db.pop(comment_id)
     return "Comment deleted!"
+
+# print(__file__)

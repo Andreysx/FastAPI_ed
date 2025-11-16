@@ -3,6 +3,8 @@ from fastapi import FastAPI, status, Body, HTTPException
 app = FastAPI(title="WTF")
 
 messages_db = {0: "First post in FastAPI"}
+## Параметр пути-{}Path / параметр запроса Query
+
 
 @app.get("/messages")
 async def read_messages() -> dict:
