@@ -1,6 +1,6 @@
 # 1. Версионирование на основе пути с использованием префикса URL:
 # Лучшее решение - использовать подприложения для разделения каждой версии вашего API на собственный объект приложения.
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, HTTPException
 
 # Основное приложение
 app = FastAPI(
@@ -59,3 +59,6 @@ app.include_router(router_v2)
 #         return {"message": "Products API Version 1"}
 #     elif version == 2:
 #         return {"message": "Products API Version 2"}
+
+
+
