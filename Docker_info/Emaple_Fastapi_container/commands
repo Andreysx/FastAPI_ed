@@ -1,0 +1,3 @@
+pip freeze > requirements.txt
+docker build --tag fastapi_hello_word:latest .
+docker run --name fastapi_hello_word -d -p 80:80 fastapi_hello_word:latest
